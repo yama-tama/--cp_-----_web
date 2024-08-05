@@ -1,0 +1,355 @@
+﻿@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Noto+Serif+JP:wght@500;700&display=swap');
+
+
+/*----------------------------------------------
+	Overall settings
+-----------------------------------------------*/
+
+body{ min-width: 1100px; font-family: "Noto Serif JP", serif; color: #111; font-weight: 500; letter-spacing: .05em; text-align: center;}
+body.ovh{ position: fixed; left: 0; top: 0; width: 100%; height: 100vh;}
+a{ color: #111; text-decoration:none; -webkit-transition: all .2s; transition: all .2s;}
+a:hover{ opacity: .7; text-decoration:none;}
+.underline{ text-decoration: underline;}
+/* font */
+.gothic{ font-family: "Noto Sans JP", sans-serif;}
+.mincho{ font-family: "Noto Serif JP", serif;}
+/* bg */
+.bg-white{ background: #fff;}
+/* color */
+.f-white{ color: #fff;}
+.f-red{ color: #c00;}
+.f-green{ color: #006675!important;}
+.f-brown{ color: #402D19;}
+
+/*------------------------------ responsive ------------------------------*/
+@media screen and (max-width: 540px) {
+	body{ min-width: inherit; font-size: 3.73vw; line-height: 1.8;}
+	a:hover{ opacity: 1;}
+}
+@media screen and (max-width: 350px) {
+	html{ font-size: 50%;}
+}
+
+
+
+/*----------------------------------------------
+	header
+-----------------------------------------------*/
+
+header{ display: flex; justify-content: space-between; align-items: center; padding: 20px 30px;}
+
+/*------------------------------ responsive ------------------------------*/
+@media screen and (max-width: 540px) {
+	header{ padding: 3.75% 4%;}
+	header p img{ width: 152px;}
+	header h1 img{ width: 100px;}
+}
+
+
+
+/*----------------------------------------------
+	section
+-----------------------------------------------*/
+
+section{ overflow: hidden; border-bottom: 2px solid #ebf3f8;}
+.wrap{ clear: both; box-sizing: content-box; max-width: 1000px; margin-left: auto; margin-right: auto; padding-left: 5%; padding-right: 5%;}
+/* ttl */
+.ttl1{ margin-bottom: .5em; padding-left: .5em; color: #006675; font-size: 26px; font-weight: bold; line-height: 1.4; border-left: 5px solid #006675;}
+/* pagetop */
+.pagetop{ position: fixed; right: 20px; bottom: 80px; cursor: pointer; z-index: 99;}
+
+
+/*------------------------------ responsive ------------------------------*/
+@media screen and (max-width: 540px) {
+	.wrap{ padding-left: 6.5%; padding-right: 6.5%;}
+	/* ttl */
+	.ttl1{ font-size: 4.53vw;}
+	/* pagetop */
+	.pagetop{ right: 5%; bottom: 50px;}
+}
+
+
+
+/*----------------------------------------------
+	footer
+-----------------------------------------------*/
+
+footer{ display: flex; justify-content: space-between; align-items: center; padding: 30px; max-width: 1180px; margin: 0 auto; font-size: 10px;}
+footer .inner{ display: flex; align-items: center;}
+footer .inner img{ margin-right: 25px;}
+
+/*------------------------------ responsive ------------------------------*/
+@media screen and (max-width: 540px) {
+	footer{ display: block;}
+	footer .inner{ justify-content: center; margin-bottom: 5%;}
+	footer .inner img{ margin: 0 10px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------
+	Sub-page settings
+----------------------------------------------------------------------------------------------*/
+/*----------------------------------------------
+	top/
+-----------------------------------------------*/
+
+.topbg{ background: url("../img/top2-bg.png") center repeat;}
+.top1{ height: 500px; padding-top: 100px; font-size: 15px; font-weight: 500; background: url("../img/top1-bg.jpg") center / auto 500px no-repeat #FFF5C7;}
+.top1 h1{ margin-bottom: 1em;}
+.top2{ padding-top: 30px;}
+.top2 h2{ display: inline-block; margin-bottom: .5em; color: #4D4948; font-size: 32px; padding: 0 100px .1em; background: url(../img/top2-ttl-left.svg) left center no-repeat, url(../img/top2-ttl-right.svg) right center no-repeat;}
+.top2 ul{ display: flex; flex-wrap: wrap; margin-bottom: 50px;}
+.top2 ul li{ width: 32%; margin-bottom: 50px; position: relative;}
+.top2 ul li:not(:nth-child(3n)){ margin-right: 2%;}
+.top2 ul li.new a:before{ display: block; content: ""; position: absolute; left: -10px; top: 0; width: 65px; height: 65px; background: url(../img/ic-new.svg) no-repeat;}
+.top2 ul li .number{ position: absolute; left: 50%; top: 0; transform: translate(-50%, -50%); display: inline-block; width: 1.4em; height: 1.4em; line-height: 1.2; color: #006675; font-size: 36px; font-weight: bold; background: #fff; border-radius: 100%; border: 2px solid #006675;}
+.top2 ul li img{ border-radius: 40px 40px 0 0; box-shadow: 15px 15px 10px -15px rgba(0,0,0,.6);}
+.top-back{ margin-bottom: 100px;}
+.top-back a{ display: inline-block; width: 100%; max-width: 380px; padding: .5em 2em; color: #fff; font-size: 20px; font-weight: bold; line-height: 1.4; background: #FF788D; position: relative;}
+.top-back a:after{ display: inline-block; content: "▶"; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 11px;}
+
+/*------------------------------ responsive ------------------------------*/
+@media screen and (max-width: 540px) {
+	.topbg{ background-size: 1000px auto;}
+	.top1{ height: 167vw; padding: 30vw 1.5em 0; font-size: 3.73vw; line-height: 2.2; background: url("../img/top1-bg-sp.jpg") center / cover no-repeat #FFF5C7;}
+	.top1 h1{ margin-bottom: 1em; padding: 0 5%;}
+	.top2{ padding-top: 3em;}
+	.top2 h2{ margin-bottom: 1em; font-size: 5.8vw; white-space: nowrap; padding: 0 18vw .1em; background: url(../img/top2-ttl-left.svg) left center / 15vw auto no-repeat, url(../img/top2-ttl-right.svg) right center / 15vw auto no-repeat;}
+	.top2 ul{ display: block; margin-bottom: 4em;}
+	.top2 ul li{ width: auto; margin-bottom: 1.5em;}
+	.top2 ul li:not(:nth-child(3n)){ margin-right: 0;}
+	.top2 ul li.new a:before{ left: 3.5em; top: -1em; width: 13.33vw; height: 13.33vw; background: url(../img/ic-new2.svg) no-repeat;}
+	.top2 ul li img{ border-radius: 0;}
+	.top-back{ margin-bottom: 5em;}
+	.top-back a{ padding: .5em 1em; max-width: inherit; font-size: 5.33vw;}
+	.top-back a:after{ font-size: 3.2vw;}
+	.top-back a img{ width: 53.3vw; margin-bottom: .2em;}
+}
+
+
+
+
+
+/*----------------------------------------------
+	interview/
+-----------------------------------------------*/
+
+.interview-bg1{ padding-bottom: 100px; background: url(../img/interview-bg1.svg) center bottom / 100% auto no-repeat #FEF9EB;}
+.interview-bg2{ background: url(../img/interview-bg2.svg) center bottom / 100% auto no-repeat #FEF9EB;}
+.interview-bg3{ background: url(../img/interview-bg1.svg) center bottom / 100% auto no-repeat #FEF9EB;}
+.vol02 .interview-bg1{ padding-bottom: 100px; background: url(../img/interview-bg1.svg) center bottom / 100% auto no-repeat #FEF9EB;}
+.vol02 .interview-bg2{ background: url(../img/interview-bg2.svg) center bottom / 100% auto no-repeat #FEF9EB;}
+.vol02 .interview-bg3{ background: url(../img/interview-bg1.svg) center bottom / 100% auto no-repeat #FEF9EB;}
+.interview1{ max-width: 1100px; margin-bottom: 50px; padding: 70px 5% 0; position: relative;}
+.interview1-bg{ padding: 150px 100px 0; height: 600px; border-radius: 200px 200px 0 0; position: relative;}
+.interview1-bg.vol1{ background: url("../img/interview1-vol1-bg.jpg") center / cover no-repeat;}
+.interview1-bg.vol2{ background: url("../img/interview1-vol2-bg.jpg") center / cover no-repeat;}
+.interview1-bg.vol3{ background: url("../img/interview1-vol3-bg.jpg") center / cover no-repeat;}
+.interview1-bg.vol4{ background: url("../img/interview1-vol4-bg.jpg") center / cover no-repeat;}
+.interview1-bg.vol5{ background: url("../img/interview1-vol5-bg.jpg") center / cover no-repeat;}
+.interview1-bg.vol6{ background: url("../img/interview1-vol6-bg.jpg") center / cover no-repeat;}
+.interview1-bg h1{ position: absolute; left: 50%; top: -240px; transform: translateX(-50%); width: 340px; height: 340px; padding-top: 200px; border-radius: 100%; background: #FEF9EB; text-align: center;}
+.interview1-bg h1 .txt1{ display: inline-block; padding: 0 1em; color: #fff; font-size: 18px; line-height: 1.6; background: #006675; border-radius: 100px;}
+.interview1-bg h1 .txt2{ display: block; margin-bottom: .3em; color: #006675; font-size: 30px; letter-spacing: .1em; line-height: 1.2;}
+.interview1-bg h1 .number{ display: inline-block; width: 1.4em; height: 1.4em; line-height: 1.2; color: #006675; font-size: 36px; font-weight: bold; background: #fff; border-radius: 100%; border: 2px solid #006675;}
+.interview1-bg .lead{ margin-bottom: .2em; color: #4D4948; font-size: 36px; font-weight: bold; line-height: 1.8; text-align: left;}
+.interview1-bg.vol2 .lead{ text-align: right;}
+.interview1-bg.vol2{ text-align: right;}
+.interview1-bg.vol2 div{ display: inline-block;}
+.interview1-bg.vol2 div .prof{ text-align: left;}
+.interview1-bg .lead span{ padding: 0 .2em; background: #fff;}
+.interview1-bg .prof{ color: #fff; font-size: 26px; font-weight: bold; text-align: left; text-shadow: 0px 0px 20px rgba(0,0,0,1), 0px 0px 20px rgba(0,0,0,.5);}
+.interview1-bg .prof span{ display: inline-block; font-size: 20px;}
+.interview1-bg .prof span.line{ border-bottom: 1px solid #fff;}
+.interview1-bg figure{ position: absolute; left: 35%; top: 60%;}
+.interview1-bg.vol2 figure{ left: 63%; top: 60%;}
+.interview1 .flower1{ position: absolute; left: -75px; bottom: 0; width: 283px;}
+.interview1 .flower2{ position: absolute; right: -80px; bottom: 0; width: 349px;}
+.interview2{ margin-bottom: 50px; padding: 4px 0; border-top: 1px solid #006675; border-bottom: 1px solid #006675;}
+.interview2wrap{ display: flex; justify-content: space-between; align-items: center; padding: 30px 0 30px 20px; text-align: left; border-top: 1px solid #006675; border-bottom: 1px solid #006675;}
+.interview2wrap .leftcol{ width: 44%; color: #006675; font-size: 20px;}
+.interview2wrap .leftcol a{ display: block; text-align: right; color: #006675; line-height: 1.4;}
+.interview2wrap .leftcol a span{ display: inline-block; text-align: left;}
+.interview2wrap .rightcol{ width: 53%;}
+.interview2wrap .rightcol dt{ display: inline-block; margin-bottom: 1em; padding: 0 1em; color: #fff; font-size: 20px; font-weight: bold; line-height: 35px; background: #006675; position: relative;}
+.interview2wrap .rightcol dt:after{ display: inline-block; content: ""; position: absolute; left: 99.99%; top: 0; width: 0; height: 0; border-style: solid; border-top: 17px solid transparent; border-bottom: 17px solid transparent; border-left: 15px solid #006675; border-right: 0;}
+.interview2wrap .rightcol dd ol{ position: relative; line-height: 1.25;}
+.interview2wrap .rightcol dd ol li{ display: flex; align-items: center; min-height: 3em; padding-left: 30px; position: relative;}
+.interview2wrap .rightcol dd ol li:before{ display: block; content: ""; position: absolute; left: 6px; top: 0; width: 3px; height: 100%; background: #006675;}
+.interview2wrap .rightcol dd ol li:first-child:before{ top: 50%; height: 50%;}
+.interview2wrap .rightcol dd ol li:last-child:before{ top: 0; height: 50%;}
+.interview2wrap .rightcol dd ol li:after{ display: block; content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 15px; height: 15px; border-radius: 100%; background: #fff; border: 3px solid #006675}
+.interview2wrap .rightcol dd ol li span{ display: block; width: 4.5em; color: #006675; position: relative;}
+.interview2wrap .rightcol dd ol li.kara span:after{ display: block; content: "～"; position: absolute; left: 1em; top: 2em; margin-top: -.5em; transform: rotate(90deg);}
+.interview2wrap .rightcol dd ol li p{ flex: 1; color: #402D19;}
+.interview3{ margin: -100px auto 50px; text-align: left;}
+.interview3 p{ margin-bottom: 1em; padding: 0 20px 5px 0; width: 175px; line-height: 40px; color: #402D19; font-size: 26px; font-weight: bold; text-align: center; background: url(../img/interview3.svg) center no-repeat;}
+.interview3 ol{ counter-reset: listnum;}
+.interview3 ol li{ padding-left: 2.6em; color: #006675; font-size: 20px; font-weight: bold; margin-bottom: .5em; position: relative;}
+.interview3 ol li:before{ position: absolute; left: 0; top: 0; display: inline-block; width: 1.5em; height: 1.5em; line-height: 1.4; counter-increment: listnum; content: counter(listnum); font-size: 26px; text-align: center; background: #F7D778; border-radius: 5px;}
+.interview3 ol li a{ color: #006675;}
+.interview4{ padding-bottom: 80px;}
+.interview4 .ttlbg{ margin-bottom: 50px; height: 350px; position: relative;}
+.interview4 .ttlbg.vol1-ttl1{ background: url("../img/interview4-vol1-ttl1.jpg") right center / cover no-repeat;}
+.interview4 .ttlbg.vol1-ttl2{ background: url("../img/interview4-vol1-ttl2.jpg") center center / cover no-repeat;}
+.interview4 .ttlbg.vol1-ttl3{ background: url("../img/interview4-vol1-ttl3.jpg") center center / cover no-repeat;}
+.interview4 .ttlbg.vol1-ttl4{ background: url("../img/interview4-vol1-ttl4.jpg") left center / cover no-repeat;}
+.interview4 .ttlbg.vol1-ttl5{ background: url("../img/interview4-vol1-ttl5.jpg") left center / cover no-repeat;}
+.interview4 .ttlbg.vol1-ttl6{ background: url("../img/interview4-vol1-ttl6.jpg") right center / cover no-repeat;}
+.interview4 .ttlbg.vol1-ttl7{ background: url("../img/interview4-vol1-ttl7.jpg") right center / cover no-repeat;}
+.interview4 .ttlbg.vol2-ttl1{ background: url("../img/interview4-vol2-ttl1.jpg") right center / cover no-repeat;}
+.interview4 .ttlbg.vol2-ttl2{ background: url("../img/interview4-vol2-ttl2.jpg") center center / cover no-repeat;}
+.interview4 .ttlbg.vol2-ttl3{ background: url("../img/interview4-vol2-ttl3.jpg") center center / cover no-repeat;}
+.interview4 .ttlbg.vol2-ttl4{ background: url("../img/interview4-vol2-ttl4.jpg") left center / cover no-repeat;}
+.interview4 .ttlbg.vol2-ttl5{ background: url("../img/interview4-vol2-ttl5.jpg") left center / cover no-repeat;}
+.interview4 .ttlbg.vol2-ttl6{ background: url("../img/interview4-vol2-ttl6.jpg") right center / cover no-repeat;}
+.interview4 .ttlbg.vol2-ttl7{ background: url("../img/interview4-vol2-ttl7.jpg") right center / cover no-repeat;}
+.interview4 .ttlbg .wrap{ position: absolute; left: 0; right: 0; bottom: 20px; text-align: left;}
+.interview4 .ttlbg .wrap figcaption{ display: flex; align-items: center;}
+.interview4 .ttlbg .wrap figcaption span{ display: inline-block; width: 1.5em; height: 1.5em; line-height: 1.4; counter-increment: listnum; content: counter(listnum); color: #006675; font-size: 45px; text-align: center; background: #F7D778; border-radius: 5px;}
+.interview4 .ttlbg .wrap figcaption p{ flex: 1; padding-left: 1em; color: #fff; font-size: 32px; line-height: 1.4; text-shadow: 0px 0px 20px rgba(0,0,0,1), 0px 0px 10px rgba(0,0,0,1);}
+.interview4 .ttlbg .wrap figcaption p.f-green{ text-shadow: none; text-shadow: 0px 0px 20px rgba(255,255,255,1), 0px 0px 10px rgba(255,255,255,1), 0px 0px 10px rgba(255,255,255,1);}
+.interview4 .box1{ display: flex; justify-content: space-between;}
+.interview4 .box1.rowreverse{ flex-direction: row-reverse;}
+.interview4 .box1.a-center{ align-items: center;}
+.interview4 .box1.a-end{ align-items: flex-end;}
+.interview4 .box1 dl{ line-height: 1.8; text-align: left;}
+.interview4 .box1 dl.mr10p{ margin-right: 10%;}
+.interview4 .box1 dl.w730{ max-width: 730px; margin-right: auto; margin-left: auto;}
+.interview4 .box1 figure{ color: #402D19; font-size: 14px; line-height: 1.4; letter-spacing: 0; text-align: right;}
+.vol02 #cont1.interview4 .box1 figure{ position: relative;}
+.vol02 #cont1.interview4 .box1 figure .abs{
+	position: absolute;
+	bottom: -20px;
+	left: -150px;
+}
+.interview4 .box1 figure img{ margin-bottom: .5em; border-radius: 30px;}
+.interview4 .box1 figure.large-right img{ width: calc(100% + (100vw - 1000px) / 2); max-width: inherit; border-radius: 30px 0 0 30px;}
+.interview4 .box1 figure.large-left img{ margin-left: calc(50% - 50vw); width: calc(100% + (100vw - 1000px) / 2); max-width: inherit; border-radius: 0 30px 30px 0;}
+.interview4 .box2{ max-width: 650px;}
+.interview4 .box2 dl{ line-height: 1.8; text-align: left;}
+.interview4 .box3{ display: flex; justify-content: center;}
+.interview4 .box3 dl{ margin-right: 5%; line-height: 1.8; text-align: left;}
+.interview4 .box3 figure{ color: #402D19; font-size: 14px; line-height: 1.4; text-align: right;}
+.interview4 figure.flowerimg, .interview4 figure.flowerimg img{ position: relative;}
+.interview4 figure.flowerimg:before{ display: block; content: ""; position: absolute; right: -103px; top: -117px; width: 257px; height: 284px; background: url(../img/interview4-vol1-img10-flower.png) no-repeat;}
+.interview-back{ margin-bottom: 100px;}
+.interview-back a{ display: inline-block; width: 100%; max-width: 380px; padding: .5em 2em; color: #fff; font-size: 20px; font-weight: bold; line-height: 1.4; background: #00A5B9; position: relative;}
+.interview-back a:after{ display: inline-block; content: "▶"; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 11px;}
+
+/*------------------------------ responsive ------------------------------*/
+@media screen and (max-width: 1100px) {
+	.interview4 .box1 figure.large-right img{ width: 460px; max-width: 460px;}
+	.interview4 .box1 figure.large-left img{ width: 460px; max-width: 460px;}
+}
+@media screen and (max-width: 540px) {
+	.interview-bg1{ padding-bottom: 10vw;}
+	.interview1{ margin-bottom: 0; padding: 0 0 45.33vw;}
+	.interview1-bg{ padding: 33vw 5% 0; height: 138.6666vw; border-radius: 0; position: relative;}
+	.interview1-bg.vol1{ background: url("../img/interview1-vol1-bg-sp.jpg") center / cover no-repeat;}
+	.interview1-bg.vol2{ background: url("../img/interview1-vol2-bg-sp.jpg") center / cover no-repeat;}
+	.interview1-bg.vol3{ background: url("../img/interview1-vol3-bg-sp.jpg") center / cover no-repeat;}
+	.interview1-bg.vol4{ background: url("../img/interview1-vol4-bg-sp.jpg") center / cover no-repeat;}
+	.interview1-bg.vol5{ background: url("../img/interview1-vol5-bg-sp.jpg") center / cover no-repeat;}
+	.interview1-bg.vol6{ background: url("../img/interview1-vol6-bg-sp.jpg") center / cover no-repeat;}
+	.interview1-bg.vol2 div{ padding-top: 42vw;}
+	.interview1-bg h1{ top: -22vw; width: 50vw; height: 50vw; padding-top: 24vw;}
+	.interview1-bg h1 .txt1{ font-size: 3.2vw;}
+	.interview1-bg h1 .txt2{ font-size: 5vw;}
+	.interview1-bg h1 .number{ font-size: 6.66vw;}
+	.interview1-bg .lead{ margin-bottom: 0; font-size: 5.86vw;}
+	.interview1-bg .lead span{ padding: 0 .2em;}
+	.interview1-bg .prof{ font-size: 6.4vw;}
+	.interview1-bg.vol2 div{ text-align: right;}
+	.interview1-bg.vol2 div .prof{ display: inline-block;}
+	.interview1-bg .prof span{ font-size: 3.73vw;}
+	.interview1-bg .prof span.line{ padding-bottom: .5em; border-bottom: 1px solid #fff;}
+	.interview1-bg figure{ position: absolute; left: 3%; top: auto; bottom: -26%; width: 60%;}
+	.interview1-bg.vol2 figure{ position: absolute; left: 3%; top: auto; bottom: -26%; width: 63%;}
+	.interview1 .flower1{ left: inherit; right: 1%; bottom: 12vw; width: 30.6%;}
+	.interview1 .flower2{ right: 1%; bottom: 12vw; width: 38.6%;}
+	.interview2{ margin-bottom: 3em;}
+	.interview2wrap{ display: block; padding: 1.5em 0;}
+	.interview2wrap .leftcol{ width: auto; margin-bottom: 1.5em; font-size: 3.73vw;}
+	.interview2wrap .rightcol{ width: auto;}
+	.interview2wrap .rightcol dt{ margin-bottom: .5em; padding: 0 .5em; font-size: 4.26vw;}
+	.interview2wrap .rightcol dd ol li{ min-height: 3.5em;}
+	.interview2wrap .rightcol dd ol li.kara span:after{ margin-top: -.25em;}
+	.interview2wrap .rightcol dd ol li span{ width: 5em;}
+	.interview3{ margin: -10vw auto 5em; text-align: left;}
+	.interview3 p{ padding: 0 1em .2em 0; width: 10em; line-height: 2.5; font-size: 4.26vw;  background-size: contain;}
+	.interview3 ol li{ margin-bottom: 1em; padding-left: 3em; font-size: 4.26vw; line-height: 1.4;}
+	.interview3 ol li:before{ font-size: 6.93vw; border-radius: .3em;}
+	.interview3 ol li.spichigyo{ padding-top: .5em;}
+	.interview4{ padding-bottom: 5em;}
+	.interview4 .ttlbg{ margin-bottom: 1.5em; height: auto; background: none!important;}
+	.interview4 .ttlbg .wrap{ position: absolute; left: 0; bottom: 2em; text-align: left;}
+	.interview4 .ttlbg .wrap figcaption{ display: block;}
+	.interview4 .ttlbg .wrap figcaption span{ font-size: 6.93vw; border-radius: .3em; margin-bottom: .5em;}
+	.interview4 .ttlbg .wrap figcaption p{ padding-left: 0; color: #fff!important; font-size: 5.33vw; white-space: nowrap;  text-shadow: 0px 0px 20px rgba(0,0,0,1), 0px 0px 10px rgba(0,0,0,1)!important;}
+	.interview4 .box1{ display: block;}
+	.interview4 .box1 dl{ width: auto!important; margin-bottom: 1em;}
+	.interview4 .box1 dl.mr10p{ margin-right: 0;}
+	.interview4 .box1 dl dd{ letter-spacing: .02em;}
+	.interview4 .box1 figure{ width: auto!important; font-size: 2.66vw;}
+	.interview4 .box1 figure img{ width: 100%!important; border-radius: 3em!important;}
+	.vol02 #cont1.interview4 .box1 figure .abs{ display: none;}
+	.vol02 #cont2.interview4 .box1 figure img.sp{ width: 50%!important;}
+	.interview4 .box1 figure.noradius img{ border-radius: 0!important;}
+	.interview4 .box1 figure.sp-flower1 img{ float: right; margin: -4em -8% -3em 0; width: 45%!important;}
+	.interview4 .box2{ max-width: inherit;}
+	.interview4 .box3{ display: block;}
+	.interview4 .box3 dl{ width: auto!important; margin-right: 0; margin-bottom: 2em;}
+	.interview4 .box3 figure{ width: auto!important; font-size: 3.73vw;}
+	.interview4 figure.flowerimg, .interview4 figure.flowerimg img{ position: relative;}
+	.interview4 figure.flowerimg{ padding-top: 19vw;}
+	.interview4 figure.flowerimg:before{ right: -6vw; top: 0; width: 40vw; height: 47.2vw; background-size: contain;}
+	.interview-back{ margin-bottom: 5em;}
+	.interview-back a{ padding: .5em 1em; max-width: inherit; font-size: 5.33vw;}
+	.interview-back a:after{ font-size: 3.2vw;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
